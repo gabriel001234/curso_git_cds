@@ -250,9 +250,9 @@ def rd3_question_7(df):
     df_xlsx = to_excel(df_selected)
 
     st.download_button(
-        label="📥 Download Buyinbg Suggestions",
+        label="📥 Download Buying Suggestions",
         data=df_xlsx,
-        file_name="buing_suggestions.xlsx",
+        file_name="buying_suggestions.xlsx",
     )
 
     return None
@@ -269,7 +269,7 @@ def to_excel(df):
 
     worksheet.set_column("A:A", None)
 
-    writer.save()
+    writer.close()
 
     processed_data = output.getvalue()
 
